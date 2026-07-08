@@ -97,7 +97,10 @@ h3 {
   border-bottom: 1px solid transparent;
   background: rgb(249 247 242);
   box-shadow: none;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
 .site-header.is-scrolled {
@@ -195,7 +198,10 @@ h3 {
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: uppercase;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
   white-space: normal;
 }
 
@@ -519,7 +525,8 @@ h3 {
 /* Services */
 
 .services {
-  padding: clamp(56px, 7vw, 84px) max(24px, calc((100% - var(--max)) / 2)) clamp(48px, 6vw, 72px);
+  padding: clamp(56px, 7vw, 84px) max(24px, calc((100% - var(--max)) / 2))
+    clamp(48px, 6vw, 72px);
   background: var(--paper);
 }
 
@@ -544,7 +551,9 @@ h3 {
   border-radius: var(--radius);
   background: var(--paper);
   box-shadow: 0 14px 38px rgba(12, 45, 87, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .service-card:hover {
@@ -624,7 +633,8 @@ h3 {
 /* Process */
 
 .process {
-  padding: clamp(72px, 9vw, 104px) max(24px, calc((100% - var(--max)) / 2)) clamp(56px, 7vw, 80px);
+  padding: clamp(72px, 9vw, 104px) max(24px, calc((100% - var(--max)) / 2))
+    clamp(56px, 7vw, 80px);
   background: var(--paper);
 }
 
@@ -839,7 +849,9 @@ h3 {
   }
 
   .nav-toggle span {
-    transition: transform 0.25s ease, opacity 0.2s ease;
+    transition:
+      transform 0.25s ease,
+      opacity 0.2s ease;
   }
 
   .site-header.is-open .nav-toggle span:nth-child(1) {
@@ -913,7 +925,9 @@ h3 {
     background: rgba(12, 45, 87, 0.38);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
   }
 
   .site-header.is-open .nav-overlay {
@@ -971,7 +985,7 @@ h3 {
   }
 
   .hero {
-    padding: 88px 0 96px;
+    padding: 88px 0 36px;
   }
 
   .brand strong {
@@ -986,10 +1000,8 @@ h3 {
     font-size: 2rem;
   }
 
-  .hero-media img {
-    height: 360px;
-    -webkit-mask-image: none;
-    mask-image: none;
+  .hero-media {
+    display: none;
   }
 
   .trust-card {
@@ -1035,5 +1047,14 @@ h3 {
 
   .footer-bottom {
     gap: 16px;
+  }
+  .hero-wave {
+    display: none;
+  }
+  .hero-copy {
+    text-align: center;
+  }
+  .hero-actions {
+    justify-content: center;
   }
 }
