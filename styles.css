@@ -547,8 +547,12 @@ h3 {
   display: block;
   margin-bottom: 20px;
   color: var(--gold-2);
-  font-size: 2.6rem;
   line-height: 1;
+}
+
+.service-icon svg {
+  width: 44px;
+  height: 44px;
 }
 
 .service-card p {
@@ -573,7 +577,7 @@ h3 {
   margin: 0;
   padding: clamp(64px, 8vw, 88px) max(24px, calc((100% - var(--max)) / 2));
   overflow: hidden;
-  background: #e4ecf6;
+  background: #f9f7f2;
 }
 
 .feature-band article {
