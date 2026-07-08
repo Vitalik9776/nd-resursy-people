@@ -13,7 +13,6 @@
   --radius: 10px;
   --max: 1180px;
   --hero-bg: #f9f7f2;
-  --wave-hero-bottom: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 155' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' d='M0 112 C420 112 680 110 860 86 C1020 58 1160 22 1280 10 C1360 6 1400 12 1440 22 V155 H0 Z'/%3E%3C/svg%3E");
 }
 
 * {
@@ -242,36 +241,49 @@ h3 {
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 96px 0 clamp(96px, 11vw, 132px);
+  padding: 84px 0 clamp(88px, 10vw, 120px);
   overflow: visible;
   background: var(--hero-bg);
 }
 
 .hero-inner {
   position: relative;
-  z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-  gap: clamp(20px, 3vw, 40px);
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: clamp(16px, 2vw, 32px);
   align-items: center;
   width: min(100% - 48px, var(--max));
   margin: 0 auto;
 }
 
-.hero::after {
+.hero-wave {
   position: absolute;
-  z-index: 3;
-  bottom: -1px;
-  left: 50%;
-  width: 100vw;
-  height: clamp(108px, 12vw, 155px);
-  background: var(--wave-hero-bottom) bottom center / 100% 100% no-repeat;
-  content: "";
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
   pointer-events: none;
-  transform: translateX(-50%);
 }
 
-.hero-copy,
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: clamp(240px, 27vw, 387px);
+}
+
+.hero-wave .shape-fill {
+  fill: #ffffff;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 3;
+}
+
 .hero-media {
   position: relative;
 }
@@ -327,11 +339,11 @@ h3 {
 
 .hero-media img {
   width: 100%;
-  height: clamp(380px, 36vw, 480px);
+  height: clamp(430px, 43vw, 560px);
   object-fit: cover;
   object-position: center;
   border-radius: var(--radius);
-  filter: saturate(0.98);
+  filter: saturate(0.99);
   -webkit-mask-image: none;
   mask-image: none;
 }
@@ -342,11 +354,11 @@ h3 {
 
 .trust-card {
   position: absolute;
-  left: clamp(24px, 10%, 88px);
-  right: auto;
-  bottom: clamp(12px, 3vw, 36px);
+  left: auto;
+  right: clamp(30px, 9vw, 106px);
+  bottom: clamp(0px, 4vw, 0px);
   z-index: 4;
-  width: min(290px, 62%);
+  width: min(300px, 46%);
   padding: 20px 22px;
   border: 1px solid rgba(221, 229, 238, 0.9);
   border-radius: var(--radius);
