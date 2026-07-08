@@ -20,32 +20,37 @@
     <header class="site-header" id="top">
       <div class="header-inner">
       <a class="brand" href="#top" aria-label="ND-Resursy">
-        <span class="brand-mark" aria-hidden="true">ND</span>
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="ND-Resursy" />
+        </span>
         <span>
           <strong>ND-Resursy</strong>
           <small>Підтримка, що працює</small>
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav-drawer">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="main-nav" aria-label="Головна навігація">
-        <a href="#services">Послуги</a>
-        <a href="#about">Про компанію</a>
-        <a href="#process">Як ми працюємо</a>
-        <a href="#contacts">Для роботодавців</a>
-        <a href="#contacts">Контакти</a>
-      </nav>
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="main-nav" aria-label="Головна навігація">
+          <a href="#services">Послуги</a>
+          <a href="#about">Про компанію</a>
+          <a href="#process">Як ми працюємо</a>
+          <a href="#contacts">Для роботодавців</a>
+          <a href="#contacts">Контакти</a>
+        </nav>
 
-      <div class="header-actions">
-        <a class="button button-gold" href="#contacts">Отримати консультацію</a>
-        <button class="lang" type="button" aria-label="Мова">UA</button>
+        <div class="header-actions">
+          <a class="button button-gold" href="#contacts">Отримати консультацію</a>
+          <button class="lang" type="button" aria-label="Мова">UA</button>
+        </div>
       </div>
       </div>
+      <div class="nav-overlay" aria-hidden="true"></div>
     </header>
 
     <main>
@@ -261,7 +266,7 @@
           <address class="contact-row">
             <a href="tel:+420732435799"><span>☎</span> +420 732 435 799<br /><small>Viber, WhatsApp, Telegram</small></a>
             <a href="mailto:info@nd-resursy.cz"><span>✉</span> info@nd-resursy.cz<br /><small>Пишіть у зручний для вас час</small></a>
-            <span><span>⌖</span> Прага, Чехія<br /><small>Особисті консультації та онлайн</small></span>
+            <span><span class="pin-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span> Пардубіце, Чехія<br /><small>Особисті консультації та онлайн</small></span>
           </address>
           <a class="button button-gold footer-button" href="mailto:info@nd-resursy.cz">Написати повідомлення <span>→</span></a>
         </div>

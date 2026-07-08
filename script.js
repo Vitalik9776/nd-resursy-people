@@ -1,16 +1,26 @@
 const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".nav-toggle");
+const overlay = document.querySelector(".nav-overlay");
+
+const setMenu = (isOpen) => {
+  header.classList.toggle("is-open", isOpen);
+  toggle?.setAttribute("aria-expanded", String(isOpen));
+  toggle?.setAttribute("aria-label", isOpen ? "Закрити меню" : "Відкрити меню");
+  document.body.classList.toggle("no-scroll", isOpen);
+};
 
 toggle?.addEventListener("click", () => {
-  const isOpen = header.classList.toggle("is-open");
-  toggle.setAttribute("aria-expanded", String(isOpen));
+  setMenu(!header.classList.contains("is-open"));
 });
 
-document.querySelectorAll(".main-nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    header.classList.remove("is-open");
-    toggle?.setAttribute("aria-expanded", "false");
-  });
+overlay?.addEventListener("click", () => setMenu(false));
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenu(false);
+});
+
+document.querySelectorAll(".main-nav a, .header-actions a").forEach((link) => {
+  link.addEventListener("click", () => setMenu(false));
 });
 
 const onScroll = () => {
