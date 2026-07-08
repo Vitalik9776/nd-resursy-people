@@ -729,37 +729,39 @@ h3 {
   font-style: normal;
 }
 
-.contact-row a,
-.contact-row > span {
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   color: var(--navy);
   font-size: 1rem;
   font-weight: 800;
 }
 
-.contact-row span span,
-.contact-row a span {
-  margin-right: 10px;
-  color: var(--navy-2);
-  font-size: 2rem;
-  vertical-align: middle;
-}
-
-.contact-row .pin-icon {
+.contact-icon {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
+  width: 2rem;
   height: 2rem;
-  margin-right: 8px;
-  font-size: 0;
-  vertical-align: middle;
+  margin-top: 2px;
+  color: var(--navy-2);
+  font-size: 2rem;
+  line-height: 1;
 }
 
-.contact-row .pin-icon svg {
-  width: 24px;
-  height: 24px;
+.contact-icon svg {
+  width: 30px;
+  height: 30px;
 }
 
-.contact-row small {
+.contact-body {
+  display: block;
+  line-height: 1.35;
+}
+
+.contact-body small {
   display: block;
   margin-top: 6px;
   color: #52677f;
