@@ -12,3 +12,10 @@ document.querySelectorAll(".main-nav a").forEach((link) => {
     toggle?.setAttribute("aria-expanded", "false");
   });
 });
+
+const onScroll = () => {
+  header?.classList.toggle("is-scrolled", window.scrollY > 10);
+};
+
+onScroll();
+window.addEventListener("scroll", onScroll, { passive: true });
