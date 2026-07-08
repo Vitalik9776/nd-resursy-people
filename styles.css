@@ -562,7 +562,7 @@ h3 {
   margin: 0;
   padding: clamp(64px, 8vw, 88px) max(24px, calc((100% - var(--max)) / 2));
   overflow: hidden;
-  background: var(--mist);
+  background: #f9f7f2;
 }
 
 .feature-band article {
@@ -677,7 +677,7 @@ h3 {
   position: relative;
   padding: clamp(64px, 8vw, 96px) max(24px, calc((100% - var(--max)) / 2)) 28px;
   overflow: hidden;
-  background: var(--paper);
+  background: var(--hero-bg);
 }
 
 .footer-cta {
