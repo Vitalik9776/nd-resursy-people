@@ -45,7 +45,7 @@
         </nav>
 
         <div class="header-actions">
-          <a class="button button-gold" href="#contacts">Отримати консультацію</a>
+          <button class="button button-gold js-consult-open" type="button">Отримати консультацію</button>
           <button class="lang" type="button" aria-label="Мова">UA</button>
         </div>
       </div>
@@ -64,7 +64,7 @@
             страхування та практична інтеграція для вас і вашої родини.
           </p>
           <div class="hero-actions">
-            <a class="button button-gold" href="#contacts">Отримати консультацію <span>→</span></a>
+            <button class="button button-gold js-consult-open" type="button">Отримати консультацію <span>→</span></button>
             <a class="play-link" href="#services" aria-label="Перейти до послуг">
               <span class="play-icon">▶</span>
               Як ми можемо допомогти
@@ -279,7 +279,7 @@
               <span class="contact-body">Пардубіце, Чехія<small>Особисті консультації та онлайн</small></span>
             </span>
           </address>
-          <a class="button button-gold footer-button" href="mailto:info@nd-resursy.cz">Написати повідомлення <span>→</span></a>
+          <button class="button button-gold footer-button js-consult-open" type="button">Написати повідомлення <span>→</span></button>
         </div>
       </div>
       <div class="footer-bottom">
@@ -289,6 +289,52 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="consult-modal"
+      id="consult-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="consult-modal-title"
+      hidden
+    >
+      <div class="consult-modal__overlay" data-consult-close tabindex="-1"></div>
+      <div class="consult-modal__dialog" role="document">
+        <button class="consult-modal__close" type="button" aria-label="Закрити" data-consult-close>
+          <span aria-hidden="true">×</span>
+        </button>
+        <h2 id="consult-modal-title">Потрібна консультація</h2>
+        <p class="consult-modal__lead">Залиште контакти — ми зв’яжемося з вами найближчим часом.</p>
+
+        <form class="consult-form" id="consult-form" novalidate>
+          <label class="consult-field">
+            <span>Ім’я <abbr title="обов’язкове">*</abbr></span>
+            <input type="text" name="name" autocomplete="name" required placeholder="Ваше ім’я" />
+          </label>
+          <label class="consult-field">
+            <span>Телефон <abbr title="обов’язкове">*</abbr></span>
+            <input type="tel" name="phone" autocomplete="tel" required placeholder="+420 …" />
+          </label>
+          <label class="consult-field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="email@example.com" />
+          </label>
+          <label class="consult-field">
+            <span>Повідомлення</span>
+            <textarea name="message" rows="4" placeholder="Коротко опишіть ваше питання"></textarea>
+          </label>
+
+          <p class="consult-form__error" id="consult-form-error" role="alert" hidden></p>
+          <p class="consult-form__success" id="consult-form-success" role="status" hidden>
+            Заявку надіслано, ми зв’яжемося з вами
+          </p>
+
+          <button class="button button-gold consult-form__submit" type="submit" id="consult-submit">
+            Надіслати
+          </button>
+        </form>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
