@@ -809,9 +809,9 @@ h3 {
 
 .footer-bottom {
   display: grid;
-  grid-template-columns: 1fr auto auto auto;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: 1.4fr 1fr auto;
+  gap: 24px 40px;
+  align-items: start;
   width: min(100%, var(--max));
   margin: 0 auto;
   padding-top: 24px;
@@ -823,6 +823,16 @@ h3 {
 
 .footer-bottom p {
   margin: 0;
+}
+
+.company-ids {
+  display: grid;
+  gap: 4px;
+}
+
+.company-ids strong {
+  color: var(--navy);
+  font-weight: 800;
 }
 
 /* Consultation modal */
